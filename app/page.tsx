@@ -14,7 +14,7 @@ export default function Home() {
       {/* Navbar */}
       <div className="absolute top-0 left-0 right-0  flex justify-between items-start p-6">
         <Image
-          src={"/logo.png"}
+          src={"/Logo.png"}
           alt="Logo"
           width={IMAGE_SIZE}
           height={IMAGE_SIZE}
