@@ -10,9 +10,9 @@ const IMAGE_SIZE = 60;
 
 export default function Home() {
   return (
-    <div className="bg-dark font-sans relative w-full">
+    <div className="relative w-full bg-dark font-sans">
       {/* Navbar */}
-      <div className="absolute top-0 left-0 right-0  flex justify-between items-start p-6">
+      <div className="absolute left-0 right-0 top-0  flex items-start justify-between p-6">
         <Image
           src={"/Logo.png"}
           alt="Logo"
@@ -20,38 +20,38 @@ export default function Home() {
           height={IMAGE_SIZE}
         />
         <div className="flex items-center">
-          <div className="text-xs font-code">
+          <div className="font-code text-xs">
             <span className="text-primary">01. </span>
             <span className="text-white">About</span>
           </div>
           <p className="p-4"></p>
-          <div className="text-xs font-code">
+          <div className="font-code text-xs">
             <span className="text-primary">02. </span>
             <span className="text-white">Experience</span>
           </div>
           <p className="p-4"></p>
-          <div className="text-xs font-code">
+          <div className="font-code text-xs">
             <span className="text-primary">03. </span>
             <span className="text-white">Work</span>
           </div>
           <p className="p-4"></p>
-          <div className="text-xs font-code">
+          <div className="font-code text-xs">
             <span className="text-primary">04. </span>
             <span className="text-white">Contact</span>
           </div>
           <p className="p-4"></p>
-          <button className="border border-primary text-primary text-sm rounded px-3 py-2 font-code">
+          <button className="rounded border border-primary px-3 py-2 font-code text-sm text-primary">
             Resume
           </button>
         </div>
       </div>
 
       {/* Main Content */}
-      <main className="w-3/4 mx-auto">
+      <main className="mx-auto w-3/4">
         {/* Header */}
-        <div className="h-screen flex flex-col justify-center">
+        <div className="flex h-screen flex-col justify-end pb-10">
           <p className="p-4"></p>
-          <p className="font-code text-md text-primary">Hi, my name is</p>
+          <p className="text-md font-code text-primary">Hi, my name is</p>
           <p className="p-4"></p>
           <p className="text-7xl font-bold text-white">Reeve Barreto.</p>
           <p className="p-2"></p>
@@ -66,21 +66,85 @@ export default function Home() {
           </p>
           <p className="p-4"></p>
           <div>
-            <button className="border border-primary text-primary text-sm rounded px-6 py-4 font-code">
+            <button className="rounded border border-primary px-6 py-4 font-code text-sm text-primary">
               Check out my work!
             </button>
+          </div>
+        </div>
+
+        <p className="p-4"></p>
+
+        <div className="flex flex-col p-8">
+          <div className="flex w-full max-w-[66%] items-center font-code">
+            <div>
+              <span className="text-lg text-primary">01. </span>
+              <span className="text-2xl font-bold text-white">About Me</span>
+            </div>
+            <p className="p-2"></p>
+            <div className="h-[1px] grow border border-light_dark"></div>
+          </div>
+          <div className="mt-10 grid grid-cols-3 gap-4">
+            <div className="col-span-2 text-light">
+              <span>
+                Hi there! My name is Reeve and I’m from Goa, India. I began my
+                journey into the web development world in early 2020. This was
+                during the pandemic and I had a lot of time to learn. But still,
+                CSS always makes me refer the internet for mundane things!
+              </span>
+              <p className="p-2"></p>
+              <span>
+                Fast forward to today, I’ve recently completed my Bachelors in
+                Science in Computer Science from{" "}
+                <span className="text-primary">
+                  {" "}
+                  Parvatibai Chowgule College of Arts & Science
+                </span>
+                . In that time I’ve had the privilege of interning for a{" "}
+                <span className="text-primary">
+                  traceability and visions company
+                </span>
+                , and I have also done freelance work for a{" "}
+                <span className="text-primary">local business</span>.
+              </span>
+              <p className="p-2"></p>
+              <span>
+                I now have the time to build projects like I’ve always wanted
+                before my further studies and it’s pretty exciting!
+              </span>
+              <p className="p-2"></p>
+              <span>
+                Here are a few technologies I’ve been working with recently:
+              </span>
+              <ul className="mt-6 grid list-disc grid-cols-2 gap-2 font-code text-sm">
+                <li>Typescript</li>
+                <li>Nextjs</li>
+                <li>tRPC</li>
+                <li>Vercel</li>
+                <li>Upstash</li>
+                <li>Prisma</li>
+              </ul>
+            </div>
+            <div className="grid place-items-start justify-items-center">
+              <Image
+                src={"/reeve-smile.png"}
+                alt="Reeve"
+                width={250}
+                height={250}
+                className="h-[250px] w-[250px] rounded object-cover"
+              />
+            </div>
           </div>
         </div>
       </main>
 
       {/* Side Socials */}
-      <div className="flex flex-col items-center fixed bottom-0 left-[5%] -translate-x-1/2">
+      <div className="fixed bottom-0 left-[5%] flex -translate-x-1/2 flex-col items-center">
         <a
           href="https://github.com/reeveboy"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faGithub} className="text-light text-xl" />
+          <FontAwesomeIcon icon={faGithub} className="text-xl text-light" />
         </a>
         <p className="p-2"></p>
         <a
@@ -88,7 +152,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faInstagram} className="text-light text-xl" />
+          <FontAwesomeIcon icon={faInstagram} className="text-xl text-light" />
         </a>
         <p className="p-2"></p>
         <a
@@ -96,20 +160,20 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faLinkedinIn} className="text-light text-xl" />
+          <FontAwesomeIcon icon={faLinkedinIn} className="text-xl text-light" />
         </a>
         <p className="p-2"></p>
-        <div className="border border-light h-20 w-[1px]"></div>
+        <div className="h-20 w-[1px] border border-light"></div>
       </div>
-      <div className="flex flex-col items-center  fixed bottom-0 right-[5%] translate-x-1/2">
+      <div className="fixed bottom-0 right-[5%]  flex translate-x-1/2 flex-col items-center">
         <a
           href="mailto:reeveboy10@gmail.com"
-          className="font-code text-sm text-light rotate-90 -translate-y-20"
+          className="-translate-y-20 rotate-90 font-code text-sm text-light"
         >
           reeveboy10@gmail.com
         </a>
         <p className="p-2"></p>
-        <div className="border border-light h-20 w-[1px]"></div>
+        <div className="h-20 w-[1px] border border-light"></div>
       </div>
     </div>
   );

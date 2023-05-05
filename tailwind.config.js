@@ -12,6 +12,7 @@ module.exports = {
         light: "#8892B0",
         primary: "#FF6464",
         white: "#CCD6F6",
+        light_dark: "#233554",
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
