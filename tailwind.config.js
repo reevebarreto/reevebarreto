@@ -13,9 +13,9 @@ module.exports = {
         primary: "#FF6464",
         white: "#CCD6F6",
         light_dark: "#233554",
+        dark_light: "#112240",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
         code: ["Fira Code", "monospace"],
       },
     },

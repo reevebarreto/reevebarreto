@@ -1,3 +1,4 @@
+import Tab from "@/components/Tab";
 import {
   faGithub,
   faInstagram,
@@ -10,7 +11,7 @@ const IMAGE_SIZE = 60;
 
 export default function Home() {
   return (
-    <div className="relative w-full bg-dark font-sans">
+    <div className="relative w-full bg-dark">
       {/* Navbar */}
       <div className="absolute left-0 right-0 top-0  flex items-start justify-between p-6">
         <Image
@@ -74,11 +75,14 @@ export default function Home() {
 
         <p className="p-4"></p>
 
-        <div className="flex flex-col p-8">
-          <div className="flex w-full max-w-[66%] items-center font-code">
+        {/* About Me Section */}
+        <div className="flex min-h-screen flex-col p-8">
+          <div className="flex w-full max-w-[66%] items-center">
             <div>
-              <span className="text-lg text-primary">01. </span>
-              <span className="text-2xl font-bold text-white">About Me</span>
+              <span className="font-code text-lg text-primary">01. </span>
+              <span className="text-2xl font-semibold text-white">
+                About Me
+              </span>
             </div>
             <p className="p-2"></p>
             <div className="h-[1px] grow border border-light_dark"></div>
@@ -134,6 +138,23 @@ export default function Home() {
               />
             </div>
           </div>
+        </div>
+
+        <p className="p-4"></p>
+
+        {/* Experience Section */}
+        <div className="mx-auto flex min-h-screen max-w-[75%] flex-col p-8">
+          <div className="flex w-full items-center">
+            <div>
+              <span className="font-code text-lg text-primary">02. </span>
+              <span className="text-2xl font-semibold text-white">
+                Where I've worked
+              </span>
+            </div>
+            <p className="p-2"></p>
+            <div className="h-[1px] grow border border-light_dark"></div>
+          </div>
+          <Tab />
         </div>
       </main>
 
