@@ -167,7 +167,7 @@ export default function Home() {
             <div>
               <span className="font-code text-lg text-primary">03. </span>
               <span className="text-2xl font-semibold text-white">
-                Some Things I've Built
+                Some Things I&apos;ve Built
               </span>
             </div>
             <p className="p-2"></p>
