@@ -4,6 +4,7 @@ import {
   faInstagram,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 
@@ -143,18 +144,112 @@ export default function Home() {
         <p className="p-4"></p>
 
         {/* Experience Section */}
-        <div className="mx-auto flex min-h-screen max-w-[75%] flex-col p-8">
+        <div className="mx-auto flex max-w-[75%] flex-col p-8">
           <div className="flex w-full items-center">
             <div>
               <span className="font-code text-lg text-primary">02. </span>
               <span className="text-2xl font-semibold text-white">
-                Where I've worked
+                Where I&apos;ve worked
               </span>
             </div>
             <p className="p-2"></p>
             <div className="h-[1px] grow border border-light_dark"></div>
           </div>
           <Tab />
+          <p className="p-8"></p>
+        </div>
+
+        <p className="p-4"></p>
+
+        {/* Work Section */}
+        <div className="flex w-full flex-col p-8">
+          <div className="flex w-[70%] items-center">
+            <div>
+              <span className="font-code text-lg text-primary">03. </span>
+              <span className="text-2xl font-semibold text-white">
+                Some Things I've Built
+              </span>
+            </div>
+            <p className="p-2"></p>
+            <div className="h-[1px] grow border border-light_dark"></div>
+          </div>
+          {/* Tasktank */}
+          <div className="relative mt-10 flex">
+            <a
+              href="https://tasktank.vercel.app/signin"
+              target="_blank"
+              className="relative z-10 before:absolute before:inset-0 before:block before:rounded before:bg-primary/40 before:duration-300 before:hover:bg-primary/0"
+            >
+              <Image
+                src={
+                  "https://user-images.githubusercontent.com/81756283/235125837-359697e6-d580-441c-bbc1-57e9d79d1b20.png"
+                }
+                alt="tasktank dashboard"
+                className="w-full max-w-lg rounded object-cover"
+                width={600}
+                height={400}
+              />
+            </a>
+            <div className="absolute right-0 top-0 flex flex-col items-end">
+              <span className="font-code text-sm text-primary">
+                Featured Project
+              </span>
+              <p className="p-1"></p>
+              <a
+                href="https://tasktank.vercel.app/signin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="text-2xl font-medium text-white transition-all duration-300 hover:text-primary">
+                  Tasktank
+                </span>
+              </a>
+              <p className="p-2"></p>
+              <div className="z-20 flex rounded bg-dark_light p-6 shadow-md transition-all hover:shadow-2xl">
+                <span className="w-full max-w-sm text-sm text-light ">
+                  Tasktank is a productivity application which can be used by
+                  individuals or companies to create, assign tasks track their
+                  progress.
+                </span>
+              </div>
+              <p className="p-2"></p>
+              <div className="flex font-code text-xs text-light">
+                <span>T3 App</span>
+                <p className="p-2"></p>
+                <span>NextJS</span>
+                <p className="p-2"></p>
+                <span>Prisma</span>
+                <p className="p-2"></p>
+                <span>tRPC</span>
+                <p className="p-1"></p>
+                <span>TailwindCSS</span>
+              </div>
+              <p className="p-2"></p>
+              <div className="flex">
+                <a
+                  href="https://github.com/reeveboy/tasktank"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faGithub}
+                    className="text-lg text-white transition-all duration-300 hover:text-primary"
+                  />
+                </a>
+                <p className="p-2"></p>
+                <a
+                  href="https://tasktank.vercel.app/signin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faArrowUpRightFromSquare}
+                    className="text-lg text-white transition-all duration-300 hover:text-primary"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
 
