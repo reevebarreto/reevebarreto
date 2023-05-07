@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Tab from "@/components/Tab";
+import WorkButton from "@/components/WorkButton";
 import {
   faGithub,
   faInstagram,
@@ -7,7 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faArrowUpRightFromSquare,
-  faBars,
+  faCode,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
@@ -21,7 +22,10 @@ export default function Home() {
       {/* Main Content */}
       <main className="mx-auto w-[90%] md:w-[75%]">
         {/* Header */}
-        <div className="flex h-screen flex-col justify-center pb-10 md:justify-end">
+        <div
+          id="header"
+          className="flex h-screen flex-col justify-center pb-10 md:justify-end"
+        >
           <p className="text-md font-code text-primary">Hi, my name is</p>
           <p className="p-2"></p>
           <p className="text-[3em] font-semibold leading-none text-white md:text-[3.5em] lg:text-[4em] xs:text-4xl">
@@ -38,16 +42,14 @@ export default function Home() {
           </p>
           <p className="p-4"></p>
           <div>
-            <button className="rounded border border-primary px-6 py-4 font-code text-sm text-primary">
-              Check out my work!
-            </button>
+            <WorkButton />
           </div>
         </div>
 
         <p className="p-4"></p>
 
         {/* About Me Section */}
-        <div className="flex min-h-screen flex-col md:p-8">
+        <div id="about" className="flex min-h-screen flex-col md:p-8">
           <div className="flex w-full items-center md:max-w-[66%]">
             <div>
               <span className="font-code text-lg text-primary">01. </span>
@@ -112,7 +114,10 @@ export default function Home() {
         <p className="p-4"></p>
 
         {/* Experience Section */}
-        <div className="mx-auto flex w-full flex-col md:max-w-[80%] md:p-8">
+        <div
+          id="experience"
+          className="mx-auto flex w-full flex-col md:max-w-[80%] md:p-8"
+        >
           <div className="flex w-full items-center">
             <div>
               <span className="font-code text-lg text-primary">02. </span>
@@ -130,7 +135,7 @@ export default function Home() {
         <p className="p-4"></p>
 
         {/* Work Section */}
-        <div className="flex w-full flex-col sm:p-8">
+        <div id="work" className="flex w-full flex-col sm:p-8">
           <div className="flex w-full items-center md:w-[70%]">
             <div>
               <span className="font-code text-lg text-primary">03. </span>
@@ -359,7 +364,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
           {/* Mobile ver */}
           <div className="rounded bg-dark_light px-6 py-10 shadow transition-all hover:shadow-lg md:hidden">
             <span className="font-code text-sm text-primary">
@@ -490,7 +494,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
           {/* Mobile ver */}
           <div className="rounded bg-dark_light px-6 py-10 shadow transition-all hover:shadow-lg md:hidden">
             <span className="font-code text-sm text-primary">
@@ -547,7 +550,10 @@ export default function Home() {
         <p className="p-16"></p>
 
         {/* Contact */}
-        <div className="flex h-screen flex-col items-center justify-center text-center">
+        <div
+          id="contact"
+          className="flex h-screen flex-col items-center justify-center text-center"
+        >
           <span className="font-code text-sm text-primary">
             04. So What&apos;s Next?
           </span>
@@ -601,10 +607,18 @@ export default function Home() {
             <FontAwesomeIcon icon={faLinkedinIn} />
           </a>
         </div>
+
         <p className="p-2"></p>
-        <div className="text-center font-code text-xs text-light">
-          Designed by Brittany Chiang
-        </div>
+
+        <a
+          href="https://github.com/reeveboy/reevebarreto"
+          target="_blank"
+          className="flex cursor-pointer items-center justify-center text-sm text-light hover:text-primary"
+        >
+          <FontAwesomeIcon icon={faCode} className="" />
+          <p className="p-1"></p>
+          <span className="font-code ">Reeve Marc Barreto</span>
+        </a>
         <p className="p-4"></p>
       </main>
 

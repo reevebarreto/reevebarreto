@@ -8,10 +8,10 @@ import { Disclosure, Transition } from "@headlessui/react";
 const IMAGE_SIZE = 60;
 
 const navigation = [
-  { name: "About", href: "#", current: true },
-  { name: "Experience", href: "#", current: false },
-  { name: "Work", href: "#", current: false },
-  { name: "Contact", href: "#", current: false },
+  { name: "About", href: "about" },
+  { name: "Experience", href: "experience" },
+  { name: "Work", href: "work" },
+  { name: "Contact", href: "contact" },
 ];
 
 export default function Navbar() {
@@ -26,25 +26,61 @@ export default function Navbar() {
             height={IMAGE_SIZE}
           />
           <div className="hidden items-center md:flex">
-            <a href="#" className="font-code text-xs">
+            <button
+              onClick={() =>
+                document.getElementById("about")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                  inline: "nearest",
+                })
+              }
+              className="font-code text-xs"
+            >
               <span className="text-primary">01. </span>
               <span className="text-white hover:text-primary">About</span>
-            </a>
+            </button>
             <p className="p-4"></p>
-            <a href="#" className="font-code text-xs">
+            <button
+              onClick={() =>
+                document.getElementById("experience")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                  inline: "nearest",
+                })
+              }
+              className="font-code text-xs"
+            >
               <span className="text-primary">02. </span>
               <span className="text-white hover:text-primary">Experience</span>
-            </a>
+            </button>
             <p className="p-4"></p>
-            <a href="#" className="font-code text-xs">
+            <button
+              onClick={() =>
+                document.getElementById("work")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                  inline: "nearest",
+                })
+              }
+              className="font-code text-xs"
+            >
               <span className="text-primary">03. </span>
               <span className="text-white hover:text-primary">Work</span>
-            </a>
+            </button>
             <p className="p-4"></p>
-            <a href="#" className="font-code text-xs">
+            <button
+              onClick={() =>
+                document.getElementById("contact")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                  inline: "nearest",
+                })
+              }
+              className="font-code text-xs"
+            >
               <span className="text-primary">04. </span>
               <span className="text-white hover:text-primary">Contact</span>
-            </a>
+            </button>
             <p className="p-4"></p>
             <button className="rounded border border-primary px-3 py-2 font-code text-sm text-primary">
               Resume
@@ -68,17 +104,22 @@ export default function Navbar() {
               </Disclosure.Button>
               <div className="flex h-full flex-col items-center justify-center pb-8 pt-8">
                 {navigation.map((item, index) => (
-                  <Disclosure.Button
+                  <button
                     key={item.name}
-                    as="a"
-                    href={item.href}
+                    onClick={() =>
+                      document.getElementById(item.href)?.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                        inline: "nearest",
+                      })
+                    }
                     className="text-md mb-6 flex flex-col items-center font-code"
                   >
                     <span className="text-sm text-primary">0{index + 1}.</span>
                     <span className="text-white transition-all duration-300 hover:text-primary">
                       {item.name}
                     </span>
-                  </Disclosure.Button>
+                  </button>
                 ))}
                 <button className="rounded border border-primary px-6 py-4 font-code text-sm text-primary">
                   Resume
