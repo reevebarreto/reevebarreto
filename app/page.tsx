@@ -1,52 +1,22 @@
+import Navbar from "@/components/Navbar";
 import Tab from "@/components/Tab";
 import {
   faGithub,
   faInstagram,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowUpRightFromSquare,
+  faBars,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-
-const IMAGE_SIZE = 60;
 
 export default function Home() {
   return (
     <div className="relative w-full bg-dark">
       {/* Navbar */}
-      <div className="absolute left-0 right-0 top-0  flex items-start justify-between p-6">
-        <Image
-          src={"/Logo.png"}
-          alt="Logo"
-          width={IMAGE_SIZE}
-          height={IMAGE_SIZE}
-        />
-        <div className="flex items-center">
-          <div className="font-code text-xs">
-            <span className="text-primary">01. </span>
-            <span className="text-white">About</span>
-          </div>
-          <p className="p-4"></p>
-          <div className="font-code text-xs">
-            <span className="text-primary">02. </span>
-            <span className="text-white">Experience</span>
-          </div>
-          <p className="p-4"></p>
-          <div className="font-code text-xs">
-            <span className="text-primary">03. </span>
-            <span className="text-white">Work</span>
-          </div>
-          <p className="p-4"></p>
-          <div className="font-code text-xs">
-            <span className="text-primary">04. </span>
-            <span className="text-white">Contact</span>
-          </div>
-          <p className="p-4"></p>
-          <button className="rounded border border-primary px-3 py-2 font-code text-sm text-primary">
-            Resume
-          </button>
-        </div>
-      </div>
+      <Navbar />
 
       {/* Main Content */}
       <main className="mx-auto w-3/4">
@@ -434,13 +404,13 @@ export default function Home() {
         </div>
         <p className="p-4"></p>
         <div className="text-center font-code text-xs text-light">
-          - by Reeve Barreto
+          Designed by Brittany Chiang
         </div>
         <p className="p-4"></p>
       </main>
 
       {/* Side Socials */}
-      <div className="fixed bottom-0 left-[5%] flex -translate-x-1/2 flex-col items-center">
+      <div className="fixed bottom-0 left-[5%] hidden -translate-x-1/2 flex-col items-center md:flex">
         <a
           href="https://github.com/reeveboy"
           target="_blank"
@@ -470,7 +440,7 @@ export default function Home() {
         <p className="p-2"></p>
         <div className="h-20 w-[1px] border border-light"></div>
       </div>
-      <div className="fixed bottom-0 right-[5%]  flex translate-x-1/2 flex-col items-center">
+      <div className="fixed bottom-0 right-[5%] hidden translate-x-1/2 flex-col items-center md:flex">
         <a
           href="mailto:reeveboy10@gmail.com"
           className="-translate-y-20 rotate-90 font-code text-sm text-light transition-all duration-300 hover:-translate-y-[5.5rem] hover:text-primary"
