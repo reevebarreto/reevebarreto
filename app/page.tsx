@@ -19,19 +19,19 @@ export default function Home() {
       <Navbar />
 
       {/* Main Content */}
-      <main className="mx-auto w-3/4">
+      <main className="mx-auto w-[90%] md:w-[75%]">
         {/* Header */}
-        <div className="flex h-screen flex-col justify-end pb-10">
-          <p className="p-4"></p>
+        <div className="flex h-screen flex-col justify-center pb-10 md:justify-end">
           <p className="text-md font-code text-primary">Hi, my name is</p>
-          <p className="p-4"></p>
-          <p className="text-7xl font-bold text-white">Reeve Barreto.</p>
           <p className="p-2"></p>
-          <p className="text-6xl font-bold text-light">
-            I Build things for the Web.
+          <p className="text-[3em] font-semibold leading-none text-white md:text-[3.5em] lg:text-[4em] xs:text-4xl">
+            Reeve Barreto.
+          </p>
+          <p className="text-[3em] font-semibold leading-none text-light md:text-[3.5em] lg:text-[4em] xs:text-4xl">
+            I build things for the Web.
           </p>
           <p className="p-4"></p>
-          <p className="text-md max-w-lg text-light">
+          <p className="md:text-md max-w-lg text-light xs:text-sm">
             Just your average run of the mill computer science graduate who is
             very interested in web development and technology. Currently, I’m
             focused on building my portfolio.
@@ -47,8 +47,8 @@ export default function Home() {
         <p className="p-4"></p>
 
         {/* About Me Section */}
-        <div className="flex min-h-screen flex-col p-8">
-          <div className="flex w-full max-w-[66%] items-center">
+        <div className="flex min-h-screen flex-col md:p-8">
+          <div className="flex w-full items-center md:max-w-[66%]">
             <div>
               <span className="font-code text-lg text-primary">01. </span>
               <span className="text-2xl font-semibold text-white">
@@ -58,8 +58,8 @@ export default function Home() {
             <p className="p-2"></p>
             <div className="h-[1px] grow border border-light_dark"></div>
           </div>
-          <div className="mt-10 grid grid-cols-3 gap-4">
-            <div className="col-span-2 text-light">
+          <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
+            <div className="col-span-3 text-light md:col-span-2 xs:text-sm">
               <span>
                 Hi there! My name is Reeve and I’m from Goa, India. I began my
                 journey into the web development world in early 2020. This was
@@ -100,12 +100,10 @@ export default function Home() {
               </ul>
             </div>
             <div className="grid place-items-start justify-items-center">
-              <Image
-                src={"/reeve-smile.png"}
+              <img
+                src={"/me.png"}
                 alt="Reeve"
-                width={250}
-                height={250}
-                className="h-[250px] w-[250px] rounded object-cover"
+                className="w-[80vw] max-w-[300px] rounded"
               />
             </div>
           </div>
@@ -114,7 +112,7 @@ export default function Home() {
         <p className="p-4"></p>
 
         {/* Experience Section */}
-        <div className="mx-auto flex max-w-[75%] flex-col p-8">
+        <div className="mx-auto flex w-full flex-col md:max-w-[80%] md:p-8">
           <div className="flex w-full items-center">
             <div>
               <span className="font-code text-lg text-primary">02. </span>
@@ -132,8 +130,8 @@ export default function Home() {
         <p className="p-4"></p>
 
         {/* Work Section */}
-        <div className="flex w-full flex-col p-8">
-          <div className="flex w-[70%] items-center">
+        <div className="flex w-full flex-col sm:p-8">
+          <div className="flex w-full items-center md:w-[70%]">
             <div>
               <span className="font-code text-lg text-primary">03. </span>
               <span className="text-2xl font-semibold text-white">
@@ -144,8 +142,10 @@ export default function Home() {
             <div className="h-[1px] grow border border-light_dark"></div>
           </div>
 
+          <p className="p-6"></p>
+
           {/* Tasktank */}
-          <div className="relative mt-10 flex">
+          <div className="relative hidden p-4 md:flex">
             <a
               href="https://tasktank.vercel.app/signin"
               target="_blank"
@@ -221,11 +221,69 @@ export default function Home() {
               </div>
             </div>
           </div>
+          {/* Mobile ver */}
+          <div className="rounded bg-dark_light px-6 py-10 shadow transition-all hover:shadow-lg md:hidden">
+            <span className="font-code text-sm text-primary">
+              Featured Project
+            </span>
+            <p className="p-1"></p>
+            <a
+              href="https://tasktank.vercel.app/signin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="text-2xl font-medium text-white transition-all duration-300 hover:text-primary">
+                Tasktank
+              </span>
+            </a>
+            <p className="p-2"></p>
+            <span className="w-full max-w-sm text-sm text-light">
+              Tasktank is a productivity application which can be used by
+              individuals or companies to create, assign tasks track their
+              progress.
+            </span>
+            <p className="p-2"></p>
+            <div className="flex flex-wrap font-code text-xs text-light">
+              <span>T3 App</span>
+              <p className="p-2"></p>
+              <span>NextJS</span>
+              <p className="p-2"></p>
+              <span>Prisma</span>
+              <p className="p-2"></p>
+              <span>tRPC</span>
+              <p className="p-2"></p>
+              <span>TailwindCSS</span>
+            </div>
+            <p className="p-2"></p>
+            <div className="flex">
+              <a
+                href="https://github.com/reeveboy/tasktank"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className="text-lg text-white transition-all duration-300 hover:text-primary"
+                />
+              </a>
+              <p className="p-2"></p>
+              <a
+                href="https://tasktank.vercel.app/signin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={faArrowUpRightFromSquare}
+                  className="text-lg text-white transition-all duration-300 hover:text-primary"
+                />
+              </a>
+            </div>
+          </div>
 
-          <p className="p-12"></p>
+          <p className="p-8 md:p-16"></p>
 
           {/* Anomus */}
-          <div className="relative mt-10 flex flex-row-reverse">
+          <div className="relative hidden p-4 md:flex md:flex-row-reverse">
             <a
               href="https://anomus.vercel.app/"
               target="_blank"
@@ -302,10 +360,68 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="p-12"></p>
+          {/* Mobile ver */}
+          <div className="rounded bg-dark_light px-6 py-10 shadow transition-all hover:shadow-lg md:hidden">
+            <span className="font-code text-sm text-primary">
+              Featured Project
+            </span>
+            <p className="p-1"></p>
+            <a
+              href="https://anomus.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="text-2xl font-medium text-white transition-all duration-300 hover:text-primary">
+                Anomus
+              </span>
+            </a>
+            <p className="p-2"></p>
+            <span className="w-full max-w-sm text-sm text-light ">
+              Anomus is a place to share anonymous messages about any topics you
+              want. I had first started this project to learn more about the
+              intricasies of NextJS and Prisma. And it turned out to be pretty
+              useful.
+            </span>
+            <p className="p-2"></p>
+            <div className="flex font-code text-xs text-light">
+              <span>NextJS</span>
+              <p className="p-2"></p>
+              <span>Prisma</span>
+              <p className="p-2"></p>
+              <span>TailwindCSS</span>
+              <p className="p-2"></p>
+              <span>tRPC</span>
+            </div>
+            <p className="p-2"></p>
+            <div className="flex">
+              <a
+                href="https://github.com/reeveboy/anomus"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className="text-lg text-white transition-all duration-300 hover:text-primary"
+                />
+              </a>
+              <p className="p-2"></p>
+              <a
+                href="https://anomus.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={faArrowUpRightFromSquare}
+                  className="text-lg text-white transition-all duration-300 hover:text-primary"
+                />
+              </a>
+            </div>
+          </div>
+
+          <p className="p-8 md:p-16"></p>
 
           {/* Citrus */}
-          <div className="relative mt-10 flex">
+          <div className="relative hidden p-4 md:flex ">
             <a
               href="https://github.com/reeveboy/citrus-web"
               target="_blank"
@@ -374,6 +490,58 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* Mobile ver */}
+          <div className="rounded bg-dark_light px-6 py-10 shadow transition-all hover:shadow-lg md:hidden">
+            <span className="font-code text-sm text-primary">
+              Featured Project
+            </span>
+            <p className="p-1"></p>
+            <a
+              href="https://tasktank.vercel.app/signin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="text-2xl font-medium text-white transition-all duration-300 hover:text-primary">
+                Citrus
+              </span>
+            </a>
+            <p className="p-2"></p>
+            <span className="w-full max-w-sm text-sm text-light">
+              Citrus was the first fullstack application I had ever built. I
+              used all the knowledge and skills I had gained from watching
+              youtube videos and put it all together. It was a great learning
+              experience and I&apos;m proud of what I had built.
+              <p className="p-2"></p>
+              Citrus is a POS Service for restaurants to track and manage their
+              bills and inventory.
+            </span>
+            <p className="p-2"></p>
+            <div className="flex flex-wrap font-code text-xs text-light">
+              <span>React</span>
+              <p className="p-2"></p>
+              <span>GraphQl</span>
+              <p className="p-2"></p>
+              <span>Typescript</span>
+              <p className="p-2"></p>
+              <span>Apollo</span>
+              <p className="p-2"></p>
+              <span>Express</span>
+            </div>
+            <p className="p-2"></p>
+            <div className="flex">
+              <a
+                href="https://github.com/reeveboy/citrus-web"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className="text-lg text-white transition-all duration-300 hover:text-primary"
+                />
+              </a>
+            </div>
+          </div>
         </div>
 
         <p className="p-16"></p>
@@ -384,17 +552,17 @@ export default function Home() {
             04. So What&apos;s Next?
           </span>
           <p className="p-3"></p>
-          <span className="text-5xl font-semibold text-white">
+          <span className="text-4xl font-semibold text-white">
             Get In Touch
           </span>
-          <p className="p-3"></p>
-          <span className="text-md w-full max-w-md text-light">
+          <p className="p-2"></p>
+          <span className="md:text-md w-full max-w-md text-light xs:text-sm">
             Since I have just completed my exams and I&apos;ll be officially
             graduating soon, I&apos;m open for any opportunities that come my
             way. Shoot me a DM or an email and I&apos;ll get back to you as soon
             as I can.
           </span>
-          <p className="p-3"></p>
+          <p className="p-2"></p>
           <a
             href="mailto:reeveboy10@gmail.com"
             className="rounded border border-primary px-6 py-4 font-code text-sm text-primary"
@@ -402,7 +570,38 @@ export default function Home() {
             Say Hi!
           </a>
         </div>
+
         <p className="p-4"></p>
+
+        <div className="flex w-full justify-center md:hidden">
+          <a
+            href="https://github.com/reeveboy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xl text-light transition-all duration-300 hover:text-primary"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+          <p className="p-2"></p>
+          <a
+            href="https://www.instagram.com/reeeevve/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xl text-light transition-all duration-300 hover:text-primary"
+          >
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
+          <p className="p-2"></p>
+          <a
+            href="https://www.linkedin.com/in/reeve-barreto-779620220"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xl text-light transition-all duration-300 hover:text-primary"
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} />
+          </a>
+        </div>
+        <p className="p-2"></p>
         <div className="text-center font-code text-xs text-light">
           Designed by Brittany Chiang
         </div>

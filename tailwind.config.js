@@ -18,6 +18,9 @@ module.exports = {
       fontFamily: {
         code: ["Fira Code", "monospace"],
       },
+      screens: {
+        xs: { max: "639px" },
+      },
     },
   },
   plugins: [],

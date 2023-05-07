@@ -33,14 +33,14 @@ export default function Tab() {
   const [activeTab, setActiveTab] = useState(EXPERIENCE[0]);
 
   return (
-    <div className="mt-10 grid grid-cols-8 gap-4">
-      <div className="col-span-2 flex flex-col font-code text-sm text-light">
+    <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-8">
+      <div className="flex font-code text-sm text-light sm:col-span-2 sm:flex-col">
         {EXPERIENCE.map((exp, index) => (
           <div
             key={index}
             onClick={() => setActiveTab(EXPERIENCE[index])}
             className={classNames(
-              "cursor-pointer border-l-2 px-4 py-3 transition-all hover:bg-dark_light hover:text-primary",
+              "cursor-pointer px-4 py-3 transition-all hover:bg-dark_light hover:text-primary sm:border-l-2 xs:border-b-2",
               exp.id === activeTab.id
                 ? "border-primary text-primary"
                 : "border-light_dark"
@@ -50,7 +50,7 @@ export default function Tab() {
           </div>
         ))}
       </div>
-      <div className="col-span-6 flex flex-col">
+      <div className="flex flex-col sm:col-span-6">
         <div className="text-lg font-medium">
           <span className="text-white">{activeTab.title} </span>
           <span className="font-semibold text-primary">
