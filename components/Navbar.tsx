@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { Disclosure, Transition } from "@headlessui/react";
 import classNames from "classnames";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const IMAGE_SIZE = 50;
 
@@ -18,17 +18,18 @@ const navigation = [
 
 export default function Navbar() {
   const [scrollDown, setScrollDown] = useState(false);
-  let prevScrollpos = window.pageYOffset;
-  window.onscroll = function () {
-    let currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      setScrollDown(false);
-    } else {
-      setScrollDown(true);
-    }
-    prevScrollpos = currentScrollPos;
-  };
-  console.log(scrollDown);
+  useEffect(() => {
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      let currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        setScrollDown(false);
+      } else {
+        setScrollDown(true);
+      }
+      prevScrollpos = currentScrollPos;
+    };
+  }, []);
 
   return (
     <Disclosure>
