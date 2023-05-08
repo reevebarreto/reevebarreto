@@ -41,9 +41,7 @@ export default function Home() {
             focused on building my portfolio.
           </p>
           <p className="p-4"></p>
-          <div>
-            <WorkButton />
-          </div>
+          <WorkButton />
         </div>
 
         <p className="p-4"></p>

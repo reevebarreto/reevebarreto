@@ -4,8 +4,10 @@ import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { Disclosure, Transition } from "@headlessui/react";
+import classNames from "classnames";
+import { useState } from "react";
 
-const IMAGE_SIZE = 60;
+const IMAGE_SIZE = 50;
 
 const navigation = [
   { name: "About", href: "about" },
@@ -15,10 +17,29 @@ const navigation = [
 ];
 
 export default function Navbar() {
+  const [scrollDown, setScrollDown] = useState(false);
+  let prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      setScrollDown(false);
+    } else {
+      setScrollDown(true);
+    }
+    prevScrollpos = currentScrollPos;
+  };
+  console.log(scrollDown);
+
   return (
     <Disclosure>
-      <div className="absolute left-0 right-0 top-0 bg-dark">
-        <div className="relative flex justify-between p-6">
+      <div
+        id="navbar"
+        className={classNames(
+          "fixed left-0 right-0 top-0 z-30 bg-dark transition-all duration-300",
+          scrollDown ? "-translate-y-full" : "translate-y-0"
+        )}
+      >
+        <div className="relative flex justify-between p-3">
           <Image
             src={"/Logo.png"}
             alt="Logo"
