@@ -104,9 +104,14 @@ export default function Navbar() {
               <span className="text-white hover:text-primary">Contact</span>
             </button>
             <p className="p-4"></p>
-            <button className="rounded border border-primary px-3 py-2 font-code text-sm text-primary">
+            <a
+              href="/Reeve_Barreto_Resume.pdf"
+              target="_blank"
+              type="button"
+              className="rounded border border-primary px-3 py-2 font-code text-sm text-primary"
+            >
               Resume
-            </button>
+            </a>
           </div>
           <Disclosure.Button className="absolute right-0 top-0 p-6 md:hidden">
             <FontAwesomeIcon icon={faBars} className="text-2xl text-primary" />

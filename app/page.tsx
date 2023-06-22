@@ -609,13 +609,13 @@ export default function Home() {
         <p className="p-2"></p>
 
         <a
-          href="https://github.com/reeveboy/reevebarreto"
+          href="https://brittanychiang.com/"
           target="_blank"
           className="flex cursor-pointer items-center justify-center text-sm text-light hover:text-primary"
         >
           <FontAwesomeIcon icon={faCode} className="" />
           <p className="p-1"></p>
-          <span className="font-code ">Reeve Marc Barreto</span>
+          <span className="font-code ">Props to Brittany!</span>
         </a>
         <p className="p-4"></p>
       </main>
