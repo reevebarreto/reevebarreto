@@ -31,14 +31,16 @@ export default function Home() {
           <p className="text-[3em] font-semibold leading-none text-white md:text-[3.5em] lg:text-[4em] xs:text-4xl">
             Reeve Barreto.
           </p>
-          <p className="text-[3em] font-semibold leading-none text-light md:text-[3.5em] lg:text-[4em] xs:text-4xl">
-            I build things for the Web.
+          <p className="text-[2em] font-semibold leading-none text-light md:text-[2.5em] lg:text-[3em] xs:text-4xl">
+            I build intelligent and scalable web apps.
           </p>
           <p className="p-4"></p>
           <p className="md:text-md max-w-lg text-light xs:text-sm">
-            Just your average run of the mill computer science graduate who is
-            very interested in web development and technology. Currently, I’m
-            focused on building my portfolio.
+            I&apos;m a Master&apos;s graduate in Computing with a focus on
+            Artificial Intelligence, blending full-stack development, machine
+            learning, and data analytics to create impactful solutions. I've
+            worked on diverse projects, from e-commerce platforms to AI-driven
+            analytics dashboards.
           </p>
           <p className="p-4"></p>
           <WorkButton />
@@ -61,41 +63,35 @@ export default function Home() {
           <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
             <div className="col-span-3 text-light md:col-span-2 xs:text-sm">
               <span>
-                Hi there! My name is Reeve and I’m from Goa, India. I began my
-                journey into the web development world in early 2020. This was
-                during the pandemic and I had a lot of time to learn. But still,
-                CSS always makes me refer the internet for mundane things!
+                Hi there! My name is Reeve, and I’m from Goa, India. My journey
+                into tech began in 2020 when I started exploring web development
+                during the pandemic. Since then, I’ve expanded my expertise into
+                full-stack development, AI, and data analytics.
               </span>
               <p className="p-2"></p>
               <span>
-                Fast forward to today, I’ve recently completed my Bachelors in
-                Science in Computer Science from{" "}
-                <span className="text-primary">
-                  {" "}
-                  Parvatibai Chowgule College of Arts & Science
-                </span>
-                . In that time I’ve had the privilege of interning for a{" "}
-                <span className="text-primary">
-                  traceability and visions company
-                </span>
-                , and I have also done freelance work for a{" "}
-                <span className="text-primary">local business</span>.
+                I recently completed my Master’s in Computing (Artificial
+                Intelligence) at
+                <span className="text-primary"> Dublin City University</span>,
+                where I was recognizedon the{" "}
+                <span className="text-primary"> Dean’s Honours List</span>. Over
+                the years, I’ve worked on AI-powered applications, built
+                full-stack solutions for businesses, and contributed to digital
+                marketing strategies that drove measurable growth.
               </span>
+
               <p className="p-2"></p>
               <span>
-                I now have the time to build projects like I’ve always wanted
-                before my further studies and it’s pretty exciting!
-              </span>
-              <p className="p-2"></p>
-              <span>
-                Here are a few technologies I’ve been working with recently:
+                I’m always eager to learn and build innovative projects that
+                blend web development and AI. Here are a few technologies I’ve
+                been working with recently:
               </span>
               <ul className="mt-6 grid list-disc grid-cols-2 gap-2 font-code text-sm">
                 <li>Typescript</li>
                 <li>Nextjs</li>
-                <li>tRPC</li>
+                <li>TensorFlow</li>
                 <li>Vercel</li>
-                <li>Upstash</li>
+                <li>Supabase</li>
                 <li>Prisma</li>
               </ul>
             </div>
@@ -146,6 +142,135 @@ export default function Home() {
           </div>
 
           <p className="p-6"></p>
+
+          {/* Tasktank */}
+          <div className="relative hidden p-4 md:flex md:flex-row-reverse">
+            <a
+              href="https://github.com/reeveboy/picsea"
+              target="_blank"
+              className="relative z-10 before:absolute before:inset-0 before:block before:rounded before:bg-primary/40 before:duration-300 before:hover:bg-primary/0"
+            >
+              <Image
+                src={
+                  "https://user-images.githubusercontent.com/81756283/235125837-359697e6-d580-441c-bbc1-57e9d79d1b20.png"
+                }
+                alt="tasktank dashboard"
+                className="w-full max-w-lg rounded object-cover"
+                width={600}
+                height={400}
+              />
+            </a>
+            <div className="absolute inset-0 flex flex-col items-start">
+              <span className="font-code text-sm text-primary">
+                Featured Project
+              </span>
+              <p className="p-1"></p>
+              <a
+                href="https://github.com/reeveboy/picsea"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="text-2xl font-medium text-white transition-all duration-300 hover:text-primary">
+                  Picsea
+                </span>
+              </a>
+              <p className="p-2"></p>
+              <div className="z-20 flex rounded bg-dark_light p-6 shadow-md transition-all hover:shadow-2xl">
+                <span className="w-full max-w-sm text-left text-sm text-light">
+                  Picsea is a simple web image search engine i designed using
+                  BM25 alogrithm. It uses the Unsplash images and display them
+                  in a grid.
+                </span>
+              </div>
+              <p className="p-2"></p>
+              <div className="flex font-code text-xs text-light">
+                <span>NodeJS</span>
+                <p className="p-2"></p>
+                <span>NextJS</span>
+                <p className="p-2"></p>
+                <span>BM25</span>
+              </div>
+              <p className="p-2"></p>
+              <div className="flex">
+                <a
+                  href="https://github.com/reeveboy/picsea"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faGithub}
+                    className="text-lg text-white transition-all duration-300 hover:text-primary"
+                  />
+                </a>
+                <p className="p-2"></p>
+                <a
+                  href="https://picsea.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faArrowUpRightFromSquare}
+                    className="text-lg text-white transition-all duration-300 hover:text-primary"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* Mobile ver */}
+          <div className="rounded bg-dark_light px-6 py-10 shadow transition-all hover:shadow-lg md:hidden">
+            <span className="font-code text-sm text-primary">
+              Featured Project
+            </span>
+            <p className="p-1"></p>
+            <a
+              href="https://github.com/reeveboy/picsea"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="text-2xl font-medium text-white transition-all duration-300 hover:text-primary">
+                Picsea
+              </span>
+            </a>
+            <p className="p-2"></p>
+            <span className="w-full max-w-sm text-sm text-light">
+              Picsea is a simple web image search engine i designed using BM25
+              alogrithm. It uses the Unsplash images and display them in a grid.
+            </span>
+            <p className="p-2"></p>
+            <div className="flex flex-wrap font-code text-xs text-light">
+              <span>NodeJS</span>
+              <p className="p-2"></p>
+              <span>NextJS</span>
+              <p className="p-2"></p>
+              <span>BM25</span>
+            </div>
+            <p className="p-2"></p>
+            <div className="flex">
+              <a
+                href="https://github.com/reeveboy/picsea"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className="text-lg text-white transition-all duration-300 hover:text-primary"
+                />
+              </a>
+              <p className="p-2"></p>
+              <a
+                href="https://picsea.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={faArrowUpRightFromSquare}
+                  className="text-lg text-white transition-all duration-300 hover:text-primary"
+                />
+              </a>
+            </div>
+          </div>
+
+          <p className="p-8 md:p-16"></p>
 
           {/* Tasktank */}
           <div className="relative hidden p-4 md:flex">
@@ -561,10 +686,10 @@ export default function Home() {
           </span>
           <p className="p-2"></p>
           <span className="md:text-md w-full max-w-md text-light xs:text-sm">
-            Since I have just completed my exams and I&apos;ll be officially
-            graduating soon, I&apos;m open for any opportunities that come my
-            way. Shoot me a DM or an email and I&apos;ll get back to you as soon
-            as I can.
+            I recently completed my Master’s in Computing, I am always open to
+            exciting opportunities in software development, AI, and data
+            analytics. I’d love to hear from you! Feel free to reach out via
+            email or LinkedIn, and I’ll get back to you as soon as I can.
           </span>
           <p className="p-2"></p>
           <a
@@ -653,10 +778,10 @@ export default function Home() {
       </div>
       <div className="fixed bottom-0 right-[5%] hidden translate-x-1/2 flex-col items-center md:flex">
         <a
-          href="mailto:reeveboy10@gmail.com"
+          href="mailto:reevemarcbarreto@gmail.com"
           className="-translate-y-20 rotate-90 font-code text-sm text-light transition-all duration-300 hover:-translate-y-[5.5rem] hover:text-primary"
         >
-          reeveboy10@gmail.com
+          reevemarcbarreto@gmail.com
         </a>
         <p className="p-2"></p>
         <div className="h-20 w-[1px] border border-light"></div>
