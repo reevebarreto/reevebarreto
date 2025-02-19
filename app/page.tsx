@@ -97,9 +97,9 @@ export default function Home() {
             </div>
             <div className="grid place-items-start justify-items-center">
               <img
-                src={"/me.png"}
+                src={"/me2.JPG"}
                 alt="Reeve"
-                className="w-[80vw] max-w-[300px] rounded"
+                className="w-[80vw] max-w-[300px] rounded-full grayscale-0"
               />
             </div>
           </div>
@@ -143,7 +143,7 @@ export default function Home() {
 
           <p className="p-6"></p>
 
-          {/* Tasktank */}
+          {/* Picsea */}
           <div className="relative hidden p-4 md:flex md:flex-row-reverse">
             <a
               href="https://github.com/reeveboy/picsea"
@@ -152,7 +152,7 @@ export default function Home() {
             >
               <Image
                 src={
-                  "https://user-images.githubusercontent.com/81756283/235125837-359697e6-d580-441c-bbc1-57e9d79d1b20.png"
+                  "https://github.com/user-attachments/assets/9afc9d2e-7875-463e-b132-8e20e40b7bd5"
                 }
                 alt="tasktank dashboard"
                 className="w-full max-w-lg rounded object-cover"
