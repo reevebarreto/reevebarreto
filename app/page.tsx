@@ -38,9 +38,9 @@ export default function Home() {
           <p className="md:text-md max-w-lg text-light xs:text-sm">
             I&apos;m a Master&apos;s graduate in Computing with a focus on
             Artificial Intelligence, blending full-stack development, machine
-            learning, and data analytics to create impactful solutions. I've
-            worked on diverse projects, from e-commerce platforms to AI-driven
-            analytics dashboards.
+            learning, and data analytics to create impactful solutions.
+            I&apos;ve worked on diverse projects, from e-commerce platforms to
+            AI-driven analytics dashboards.
           </p>
           <p className="p-4"></p>
           <WorkButton />

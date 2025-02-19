@@ -105,7 +105,7 @@ export default function Navbar() {
             </button>
             <p className="p-4"></p>
             <a
-              href="/Reeve_Barreto_Resume.pdf"
+              href="/Resume.pdf"
               target="_blank"
               type="button"
               className="rounded border border-primary px-3 py-2 font-code text-sm text-primary"
